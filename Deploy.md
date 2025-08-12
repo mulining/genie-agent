@@ -61,17 +61,15 @@ sh start.sh
 
 > ps 1: 可以动态适合自己key,编辑 `joyagent-jdgenie/genie-backend/src/main/resources/application.yml`, 其中配置是可以添加多个模型，然后在不同模块下可以指定，比如在react模式下，我指定了claude-3-7-sonnet-v1，建议修改为适合自己的模型名字。
 
-```json
-settings: '{
-        "claude-3-7-sonnet-v1": {
-                "model": "claude-3-7-sonnet-v1",
-                "max_tokens": 8192,
-                "temperature": 0,
-                "base_url": "<input llm server here>",
-                "apikey": "<input llm key here>",
-                "max_input_tokens": 128000
-        }
-}'
+```yml
+settings: '{"claude-3-7-sonnet-v1": {
+        "model": "claude-3-7-sonnet-v1",
+        "max_tokens": 8192,
+        "temperature": 0,
+        "base_url": "<input llm server here>",
+        "apikey": "<input llm key here>",
+        "max_input_tokens": 128000
+    }}'
 ```
 
 > ps 2:修改完配置后，重新 `build.sh`,然后 `start.sh`
